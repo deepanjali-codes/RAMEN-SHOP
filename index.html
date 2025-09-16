@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+    <style>
+        body {
+            background-color: rgb(207, 231, 255);
+        }
+        navbar {
+            background-color: #f8f9fa;
+        }
+        span.navbar-brand {
+            color: #ec1a1a;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'fantasy', sans-serif;
+            font-weight: bold;
+            text-shadow: 2px 2px #8e9aa1;
+        }
+        .text-type {
+            display: inline-block;
+            white-space: pre-wrap;
+        }
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
+
+        span.navbar-brand:hover {
+            color: #ff5733;
+            text-shadow: 3px 3px #d1784f;
+        }
+        h2 {
+            color: #d35400;
+        }
+        .list-group-item {
+            font-size: 1.2em;
+        }   
+        .navbar {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 2em;
+            margin: 0 20px;
+            font-family: fantasy, sans-serif;
+            color: #0b1e88;
+            line-height: 1.6;
+            text-align: center;
+            text-shadow: 1px 1px #6b8291;
+        }
+        .text-type {
+            display: inline-block;
+            white-space: pre-wrap;
+        }
+
+        .text-type__cursor {
+            margin-left: 0.25rem;
+            display: inline-block;
+            opacity: 1;
+            animation: blink 1s step-start 0s infinite;
+          }
+
+        .text-type__cursor--hidden {
+            display: none;
+          }
+        label {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #14293d;
+            margin-bottom: 5px;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 1px 1px #84bac7;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcd4e0;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 678, 990, 0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: rgb(240, 195, 195);
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        span.badge {
+            font-size: 1em;
+            padding: 10px;
+            background-color: #a72828;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        span.badge:hover {
+            background-color: #218838;
+        }
+        img {
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            object-fit: cover;
+            display: block;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .list-group-item {
+            font-size: 1.2em;
+            background-color: #f7d1ed;
+            border: 1px solid #8d8484;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .list-group-item:hover {
+            background-color: #d392d3;
+        }
+    </style>
+    <title>Ramen Shop</title>
+  </head>
+  <body>
+  <div class="container d-flex justify-content-center">
+    <nav class="navbar">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1" style="font-size: 2.5em;"><mark>W</mark>elcome to my <mark>R</mark>amen <mark>S</mark>hop! 🍜</span>
+  </div>
+</nav>
+</div>
+ <div class="text-type">
+   <span id="text"></span><span id="cursor" class="text-type__cursor">|</span>
+</div>
+    <script>
+      const text = "Welcome to our cozy Ramen Shop, where we serve authentic and delicious ramen dishes made with fresh ingredients and traditional recipes. Our chefs are passionate about creating the perfect bowl of ramen that will warm your heart and satisfy your taste buds. Whether you're a ramen enthusiast or trying it for the first time, we invite you to join us for a memorable dining experience. Enjoy our variety of broths, noodles, and toppings, all crafted to perfection. Thank you for choosing our Ramen Shop!";
+      let index = 0;
+      const speed = 50; // Speed of typing in milliseconds
+
+      function type() {
+        if (index < text.length) {
+          document.getElementById("text").innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, speed);
+        } else {
+          document.getElementById("cursor").classList.add("text-type__cursor--hidden");
+        }
+      }
+
+      type();
+    </script>
+ <br>   
+  <img src="https://cdna.artstation.com/p/assets/images/images/014/058/582/original/florencia-angellia-retrocafe-remake-large.gif?1542275605" class="img-fluid" alt="Ramen Shop" height="400" width="100%">           
+        <BR>
+    <div class="container mt-4 mb-4">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center"><mark>O</mark>ur <mark>M</mark>enu 👩‍🍳</h2>
+            <br>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="https://media.tenor.com/Gg6TH2YU9SMAAAAj/ramen-cute-ramen.gif" alt="Ramen Icon" style="margin-right: 10px; width: 300px; height: 250px;"/>
+              <p>Shoyu Ramen</p>
+              <span class="badge">$12.00</span>         
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="https://img1.picmix.com/output/stamp/normal/5/4/0/9/2609045_d7d06.gif " alt="Ramen Icon" style="margin-right: 10px;width: 300px; height: 250px;"/>
+              <p>Miso Ramen</p>
+              <span class="badge">$13.00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="https://orig00.deviantart.net/f1fa/f/2015/267/6/b/ramen_by_wangqr-d4otof5.gif" alt="Ramen Icon" style="margin-right: 10px;width: 300px; height: 250px;"/>
+              <p>Tonkotsu Ramen</p>
+              <span class="badge">$14.00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="https://png.pngtree.com/png-clipart/20240928/original/pngtree-noodle-cup-in-pixel-art-style-png-image_16114627.png" alt="Ramen Icon" style="margin-right: 10px;width: 300px; height: 250px;"/>
+              <p>Spicy Ramen</p>
+              <span class="badge">$13.50</span>     
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="https://64.media.tumblr.com/86aa355221d807e11fedc2c2473c4ee6/tumblr_n9w7k3K7Je1snc5kxo1_640.gif" alt="Vegetarian Ramen Icon" style="margin-right: 10px;width: 300px; height: 250px;"/>
+                <p>Vegetarian Ramen</p>
+                <span class="badge">$12.50</span>
+                </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="container d-flex justify-content-center">
+          <img src="https://i.pinimg.com/originals/30/29/e0/3029e081d7064945c3ad85cc00b39b19.gif" alt="Ramen Bowl" style="display: block; margin: 20px auto; width: 150px; height: 150px;"/>
+            <img src="https://f2.toyhou.se/file/f2-toyhou-se/characters/3143292?1611351827" alt="Ramen Bowl" style="display: block; margin: 20px auto; width: 150px; height: 150px;"/>
+          <img src="https://i.pinimg.com/originals/ac/5f/68/ac5f68cf7469c3459e22edd81e070ecd.gif" alt="Ramen Bowl" style="display: block; margin: 20px auto; width: 150px; height: 150px;"/>           
+          <img src="https://i.pinimg.com/originals/cf/0c/b7/cf0cb7b604ca50e92ee814dc0643ff2f.gif" alt="Ramen Bowl" style="display: block; margin: 20px auto; width: 150px; height: 150px;"/>
+            <img src="https://i.gifer.com/origin/ff/ff95320f2d482b0d3847efd6842c7d39_w200.gif" alt="Ramen Bowl" style="display: block; margin: 20px auto; width: 150px; height: 150px;"/>
+          <img src="https://i.gifer.com/69GA.gif" alt="Ramen Bowl" style="display: block; margin: 20px auto; width: 150px; height: 150px;"/>
+            <img src="https://i.pinimg.com/originals/5b/a2/ab/5ba2abfdfb5580fd397f8ec6714ec827.gif" alt="Ramen Bowl" style="display: block; margin: 20px auto; width: 150px; height: 150px;"/>
+            <img src="https://i.pinimg.com/originals/90/af/60/90af60d2be661a8a954ab8949d9c8001.gif" alt="Ramen Bowl" style="display: block; margin: 20px auto; width: 150px; height: 150px;"/>
+            <img src="https://i.pinimg.com/originals/4a/06/64/4a06646ae05ffdbe9b2a4f4fc3cf9a0a.gif" alt="Ramen Bowl" style="display: block; margin: 20px auto; width: 150px; height: 150px;"/>
+        </div>
+        <BR>
+        
+        <center>
+        <div class="container mt-4 mb-4">
+        <div class="col-md-6">
+            <h2 class="text-center"><mark>O</mark>rder <mark>P</mark>lease 😋</h2>
+            <br>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+             <label for="contact" class="form-label">Contact Information</label>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="contact" placeholder="Phone or Email" required>
+            </div>
+            <div class="mb-3">
+              <label for="ramen" class="form-label">Select Ramen</label>
+              <select class="form-select" id="ramen">
+                <option selected>Choose...</option>
+                <option value="1">Shoyu Ramen - $12.00</option>
+                <option value="2">Miso Ramen - $13.00</option>
+                <option value="3">Tonkotsu Ramen - $14.00</option>
+                <option value="4">Spicy Ramen - $13.50</option>
+                <option value="5">Vegetarian Ramen - $12.50</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Quantity</label>
+              <input type="number" class="form-control" id="quantity" placeholder="Enter quantity" min="1"> 
+            </div>
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+          </form>
+        </div>
+        </div>
+        
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
